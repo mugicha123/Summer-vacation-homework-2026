@@ -1,8 +1,13 @@
 //ロックするURLのリスト
 const lockList = [
     "https://www.youtube.com/",
-    "https://www.example.com/"
+    "https://example.com/"
 ];
+
+// ロック解除用のパスワード
+const password = "0123";
+
+
 
 //lockPage関数を定義
 function lockPage() {
@@ -21,6 +26,7 @@ function lockPage() {
     style.textContent = '* { margin: 0; padding: 0; }';
     document.head.appendChild(style);
     //LockDivのスタイルを設定
+    lockDiv.id = "lockDiv";
     lockDiv.style.position = "fixed";
     lockDiv.style.bottom = "20px";
     lockDiv.style.width = "100%";
@@ -29,9 +35,15 @@ function lockPage() {
     lockDiv.style.left = '0';
     lockDiv.style.zIndex = '9999';
     lockDiv.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    lockDiv.style.paddingTop = '100px';
+    lockDiv.style.color = 'white';
+    lockDiv.style.textAlign = 'center';
+    lockDiv.innerHTML = "<h1 style='font-size: 48px'>このページはロックされています</h1><p style='font-size: 20px;'>このページはロックされているため、操作できません。</p>";
     //LockDivをbodyに追加
     document.body.appendChild(lockDiv);
 };
+
+
 
 //ロック判定関数を定義
 function lockJudgement() {
@@ -47,3 +59,14 @@ function lockJudgement() {
 
 //ページ読み込み時にlockJudgement関数を実行
 window.addEventListener('load', lockJudgement);
+
+
+
+//lock解除関数を定義
+window.cancellation = function() {
+    const password_judgement = prompt("パスワードを入力してください:", "");
+    if (password_judgement === password) {
+        //ロック解除
+        document.querySelector('div[id="lockDiv"]').remove();
+    }
+};
