@@ -1,3 +1,10 @@
+//ロックするURLのリスト
+const lockList = [
+    "https://www.youtube.com/",
+    "https://www.example.com/"
+];
+
+//lockPage関数を定義
 function lockPage() {
     //LockDivを作成
     const lockDiv = document.createElement('div');
@@ -24,4 +31,19 @@ function lockPage() {
     lockDiv.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     //LockDivをbodyに追加
     document.body.appendChild(lockDiv);
-}
+};
+
+//ロック判定関数を定義
+function lockJudgement() {
+    //現在のURLを取得
+    const currentUrl = window.location.href;
+    //現在のURLがロックリストに含まれているか判定する
+    const judgement = lockList.some(item => currentUrl.includes(item));
+    //判定結果がtrueの場合、lockPage関数を実行
+    if (judgement) {
+        lockPage();
+    }
+};
+
+//ページ読み込み時にlockJudgement関数を実行
+window.addEventListener('load', lockJudgement);
