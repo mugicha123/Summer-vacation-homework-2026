@@ -8,7 +8,6 @@ const lockList = [
 const password = "0123";
 
 
-
 //lockPage関数を定義
 function lockPage() {
     //LockDivを作成
