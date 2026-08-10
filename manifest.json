@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "拡張機能",
+  "version": "1.0",
+  "description": "指定されたURLのページをlockする拡張機能です。",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
