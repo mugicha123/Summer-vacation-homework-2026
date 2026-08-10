@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "拡張機能",
+  "name": "lockPage",
   "version": "1.0",
   "description": "指定されたURLのページをlockする拡張機能です。",
   "action": {
