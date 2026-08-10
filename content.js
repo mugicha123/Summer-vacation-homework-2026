@@ -7,9 +7,13 @@ const lockList = [
 // ロック解除用のパスワード
 const password = "0123";
 
+//ロック状態を管理する変数
+let lock = true;
+
 
 //lockPage関数を定義
 function lockPage() {
+    lock = true;
     //LockDivを作成
     const lockDiv = document.createElement('div');
     //html,bodyを取得
@@ -46,26 +50,29 @@ function lockPage() {
 
 //ロック判定関数を定義
 function lockJudgement() {
-    //現在のURLを取得
-    const currentUrl = window.location.href;
-    //現在のURLがロックリストに含まれているか判定する
-    const judgement = lockList.some(item => currentUrl.includes(item));
-    //判定結果がtrueの場合、lockPage関数を実行
-    if (judgement) {
-        lockPage();
-    }
+    if (lock === true) {
+        //現在のURLを取得
+        const currentUrl = window.location.href;
+        //現在のURLがロックリストに含まれているか判定する
+        const judgement = lockList.some(item => currentUrl.includes(item));
+        //判定結果がtrueの場合、lockPage関数を実行
+        if (judgement) {
+            lockPage();
+        };
+    };
 };
 
 //ページ読み込み時にlockJudgement関数を実行
 window.addEventListener('load', lockJudgement);
 
-
-
 //lock解除関数を定義
 window.cancellation = function() {
-    const password_judgement = prompt("パスワードを入力してください:", "");
-    if (password_judgement === password) {
-        //ロック解除
-        document.querySelector('div[id="lockDiv"]').remove();
-    }
+    if (lock === true) {
+        const password_judgement = prompt("パスワードを入力してください:", "");
+        if (password_judgement === password) {
+            //ロック解除
+            document.querySelector('div[id="lockDiv"]').remove();
+            lock = false;
+        };
+    };
 };
