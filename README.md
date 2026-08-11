@@ -14,5 +14,5 @@ CodeからDownload ZIPを選択し、ダウウンロードします。<br>
 
 ## パスワードとロックするサイトの変更方法
 SUMMER-VACATION-HOMEWORK-2026-"Branch名"のファイルにあるcontent.jsをダブルクッリクで開きます。<br>
-ロックするURLのリストがあります。標準ではhttps://www.youtube.com/とhttps://example.com/になっていますがここを変更することでロックするサイトを変更することができます。<br>
+ロックするURLのリストがあります。標準では”https:/www.youtube.com/”とhttps:/example.com/になっていますがここを変更することでロックするサイトを変更することができます。<br>
 パスワードは0123になっているのでパスワードをここで変更できます。
