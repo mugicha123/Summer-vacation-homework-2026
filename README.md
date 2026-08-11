@@ -16,3 +16,10 @@ CodeからDownload ZIPを選択し、ダウウンロードします。<br>
 SUMMER-VACATION-HOMEWORK-2026-"Branch名"のファイルにあるcontent.jsをダブルクッリクで開きます。<br>
 ロックするURLのリストがあります。標準では`https://www.youtube.com/`と`https://example.com/`になっていますがここを変更することでロックするサイトを変更することができます。<br>
 パスワードは0123になっているのでパスワードをここで変更できます。
+
+## v1.0とv2.0の違い
+v2.0は解除ボタンがありますが、v1.0にはありません。
+v1.0はSPA(Single Page Application)には対応されていません。
+
+## SPA(Single Page Application)とは
+最初に1枚のWebページだけを読み込み、その後は画面全体を再読み込みせずにJavaScriptを使って必要な部分だけを書き換えるWebアプリの開発手法のこと
