@@ -6,7 +6,7 @@ CodeからDownload ZIPを選択し、ダウウンロードします。<br>
 そしたらzipファイルを解凍します。<br>
 そしたらSUMMER-VACATION-HOMEWORK-2026-"Branch名"というファイルの中にicon.pngやcontent.jsなどが入っています。<br>
 そしたらこのファイルをわかやすい場所に保存してください。<br>
-次にGoogle Chromeでchrome://extensions/を開きます。<br>
+次にGoogle Chromeで`chrome://extensions/`を開きます。<br>
 次に右上にあるデベロッパー モードをクリックします。<br>
 そうすると"パッケージ化されていない拡張機能を読み込む"と出てくるので、選択します。<br>
 ファイルを聞かれるのでzipファイルを解凍した時に出てきたSUMMER-VACATION-HOMEWORK-2026-"Branch名"を選択。<br>
