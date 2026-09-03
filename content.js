@@ -23,6 +23,7 @@ function removeTargetElement() {
             const targetElement = document.querySelector('div.IlICye.ca1MEe');
             if (targetElement) {
                 targetElement.remove();
+                alert("youtubeをロックした");
             }
         }
     }
