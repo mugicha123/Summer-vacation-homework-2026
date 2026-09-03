@@ -1,5 +1,6 @@
 # Summer-vacation-homework-2026
-icon.pngはGoogle FontsのVpn Lock 2を使用しています。
+新しくyoutube専用のロック変数を追加<br>
+背景の透明度を100%に変更
 
 ## 解除方法
 ロックされたページの解除ボタンを押します。<br>

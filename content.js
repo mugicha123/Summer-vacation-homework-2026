@@ -7,7 +7,7 @@ const lockList = [
 const password = "0123";
 
 // youtubeロック
-const youtube_lock = true;
+const youtube_lock = false;//youtubeに関する変数trueにする有効になる
 
 // ロック状態を管理する変数
 let lock = true;
